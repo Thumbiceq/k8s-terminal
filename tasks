@@ -1,0 +1,1 @@
+1) create pod "myfirstpod" which will print hello every 10sec to stdout. Run it in namespace basic.

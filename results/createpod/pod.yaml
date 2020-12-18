@@ -5,6 +5,7 @@ metadata:
   labels:
     run: myfirstpod
   name: myfirstpod
+  namespace: basic
 spec:
   containers:
   - image: busybox
