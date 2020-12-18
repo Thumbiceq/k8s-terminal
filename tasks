@@ -1,1 +1,2 @@
 1) create pod "myfirstpod" which will print hello every 10sec to stdout. Run it in namespace basic.
+2) install multus CNI and deploy pod using this multus with one more interface.
