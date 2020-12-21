@@ -21,6 +21,24 @@ spec:
       containers:
       - image: nginx
         name: nginx
-        resources: {}
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+      - name: logs
+        image: busybox
+        command: ["/bin/sh", "-c"]
+        args:
+          - while true; do
+              echo 'Everything is working fine! Good Job! <br />' $(date) '<br /> <br />' >> /html/index.html;
+              sleep 60;
+            done
+        volumeMounts:
+        - name: html
+          mountPath: /html
+      volumes:
+      - name: html
+        emptyDir: {}
 status: {}
 
