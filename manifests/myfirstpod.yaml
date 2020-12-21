@@ -3,14 +3,13 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: multus-pod
-  name: multus-pod
-  annotations:
-    k8s.v1.cni.cncf.io/networks: macvlan-conf
+    run: myfirstpod
+  name: myfirstpod
+  namespace: basic
 spec:
   containers:
   - image: busybox
-    name: multus-pod
+    name: myfirstpod
     command: ["/bin/sh", "-c", "while true; do echo hello; sleep 10; done"]
     resources: {}
   dnsPolicy: ClusterFirst
