@@ -1,5 +1,5 @@
 # k8s-terminal
-learning terminal for k8s (portable to be installed on any local desktop)
+Tasks to learn k8s. Install cluster and deal with defined usecases
 
 # Usage
 In task file you will find tasks for k8s training.
