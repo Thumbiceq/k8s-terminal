@@ -1,14 +1,18 @@
-1) Deploy your first cluster (one master and one worker node) using kubespray.
+1) Deploy your first cluster (one master and one worker node) using kubespray. "If not able to install two VMs install Minikube instead"
 
 2) create pod "myfirstpod" which will print hello every 10sec to stdout. Run it in namespace basic. Check your results with "kubectl logs" command
 
-3) install multus CNI and deploy pod using this multus with more interfaces.
+3) install multus CNI and deploy pod using this multus with more interfaces. "If Minikube, skip this"
 
 4) crate pod "multus-test" which will have more than one interface for pod. (you have to create network-attachment-definition first, all is available on multus pages)
+"If Minikube, skip this"
 
 5) create deployment "webserver" with 2 replicas and 2 containers in namespace "steborice": first container with  nginx image name "first", second with busybox image name "second".
 Share volume "html" to those two containers. Make sure for "first" container mount point is "/usr/share/nginx/html". "second" mount point for this volume is /html
 "second" container should write "'Everything is working fine! Good Job! <br />' $(date) '<br /> <br />'" to /html/index.html every 60 seconds
 Create service for this deployment, type NodePort and check your results via curl and via chrome
+
+6) create deployment in namespace brezova with image busybox which will show date every 30 sec. Create two replicas. Once both are running kill one of them and use 
+"--watch" to check what is actually happening
 
 
