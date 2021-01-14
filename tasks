@@ -15,4 +15,4 @@ Create service for this deployment, type NodePort and check your results via cur
 6) create deployment in namespace brezova with image busybox which will show date every 30 sec. Create two replicas. Once both are running kill one of them and use 
 "--watch" to check what is actually happening
 
-
+7) create ingress for any deployment you have in cluster. 
