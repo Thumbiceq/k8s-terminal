@@ -1,5 +1,0 @@
-Services discovery via DNS (if external service needed it needs to be added into this DNS discovery as well)
-	selectorless discovery:
-		no selector > no pod assigned. Creating endpoints with same name as service with external ip = reachability for pod
-	CNAME based kubernetes service:
-		external DNS record is held, anyway DNS resolver needs to be added if classic google resolver doesnt know that (internal DNS)
